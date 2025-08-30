@@ -173,3 +173,10 @@ body.dark-mode{
   .container{ grid-template-columns: 1fr; }
   .sidebar{ position: static; }
 }
+
+/* ===== Nawigacja – przyciski po prawej ===== */
+#toggle-theme { margin-left: auto; } /* wypycha grupę przycisków na prawo */
+
+
+
+
