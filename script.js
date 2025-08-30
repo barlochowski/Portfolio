@@ -64,23 +64,26 @@ function applyLanguage(lang) {
     el.textContent = (lang === 'en') ? en : pl;
   });
 
-  // update language switch label
+  // update language switch label (pokazujemy JĘZYK DO KTÓREGO przełączasz)
   const label = toggleLangBtn?.querySelector('.btn-label');
   if (label) label.textContent = (lang === 'en') ? 'Polski' : 'English';
 
-  // Twemoji flag (with fallback to native emoji if CDN blocked)
+  // Ikona flagi ma odpowiadać etykiecie (język docelowy).
   const icon = toggleLangBtn?.querySelector('.lang-icon');
   if (icon) {
-    // Try Twemoji first
-    icon.textContent = ''; // clear any previous emoji
-    icon.className = `twa lang-icon ${lang === 'en' ? 'twa-flag-united-kingdom' : 'twa-flag-poland'}`;
+    // target language code (przeciwny do aktualnego)
+    const target = (lang === 'en') ? 'pl' : 'en';
 
-    // Fallback check (if background-image not applied -> use emoji)
+    // Twemoji (z fallbackiem na natywne emoji)
+    icon.textContent = ''; // czyścimy ewentualne emoji
+    icon.className = `twa lang-icon ${target === 'en' ? 'twa-flag-united-kingdom' : 'twa-flag-poland'}`;
+
+    // Fallback: jeżeli CDN zablokowany i brak tła – użyj natywnego emoji
     requestAnimationFrame(() => {
       const bg = getComputedStyle(icon).backgroundImage;
       if (!bg || bg === 'none') {
         icon.className = 'lang-icon';
-        icon.textContent = (lang === 'en') ? '🇬🇧' : '🇵🇱';
+        icon.textContent = (target === 'en') ? '🇬🇧' : '🇵🇱';
       }
     });
   }
@@ -108,3 +111,15 @@ function setupReveal() {
 
   revealEls.forEach(el => io.observe(el));
 }
+document.querySelectorAll('.top-nav a[href^="#"]').forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    const target = document.querySelector(link.getAttribute('href'));
+    if (!target) return;
+
+    const headerHeight = document.querySelector('.site-header').offsetHeight;
+    const offset = target.getBoundingClientRect().top + window.scrollY - headerHeight - 10;
+
+    window.scrollTo({ top: offset, behavior: 'smooth' });
+  });
+});
