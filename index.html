@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bartłomiej Łochowski – CV i Portfolio (QA)</title>
+  <meta name="description" content="Bartłomiej Łochowski — ISTQB Certified QA Tester. CV online, projekty testowe (API/Postman, manual), umiejętności i kontakt." />
+  <link rel="canonical" href="https://twojadomena.pl/" />
+  <link rel="icon" href="favicon.ico" />
+  <meta property="og:title" content="Bartłomiej Łochowski — QA Tester | CV & Portfolio" />
+  <meta property="og:description" content="CV online + przykładowe projekty testowe (API/Postman, manual), umiejętności i kontakt." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="bartlomiej.jpg" />
+
+  <!-- Style główny -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- Ikony Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!-- Twemoji Awesome – ikony flag -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twemoji-awesome/1.0.5/twemoji-awesome.min.css">
+</head>
+<body>
+  <!-- Skip link dla dostępności -->
+  <a class="skip-link" href="#main">Pomiń do treści</a>
+
+  <!-- Górny pasek z nazwą i nawigacją -->
+  <header class="site-header" role="banner">
+    <div class="brand">
+      <img src="bartlomiej.jpg" alt="" class="brand-avatar" />
+      <div class="brand-text">
+        <h1 class="brand-name">Bartłomiej Łochowski</h1>
+        <p class="brand-tagline" data-pl="QA Tester • ISTQB • API/Manual"
+           data-en="QA Tester • ISTQB • API/Manual">QA Tester • ISTQB • API/Manual</p>
+      </div>
+    </div>
+
+    <nav class="top-nav" aria-label="Główna nawigacja">
+      <a class="btn nav-btn" href="#about"><i class="fas fa-user"></i> <span data-pl="O mnie" data-en="About">O mnie</span></a>
+      <a class="btn nav-btn" href="#experience"><i class="fas fa-briefcase"></i> <span data-pl="Doświadczenie" data-en="Experience">Doświadczenie</span></a>
+      <a class="btn nav-btn" href="#skills"><i class="fas fa-lightbulb"></i> <span data-pl="Umiejętności" data-en="Skills">Umiejętności</span></a>
+      <a class="btn nav-btn" href="#projects"><i class="fas fa-flask"></i> <span data-pl="Portfolio" data-en="Portfolio">Portfolio</span></a>
+      <a class="btn nav-btn" href="#contact"><i class="fas fa-envelope"></i> <span data-pl="Kontakt" data-en="Contact">Kontakt</span></a>
+
+      <!-- Przełączniki -->
+      <button id="toggle-theme" class="btn" type="button" aria-pressed="false">
+        <i class="fas fa-moon"></i> <span class="btn-label" data-pl="Tryb nocny" data-en="Dark mode">Tryb nocny</span>
+      </button>
+      <button id="toggle-lang" class="btn" type="button" aria-label="Zmień język">
+        <!-- Nie ustawiamy flagi na sztywno – JS zrobi to poprawnie -->
+        <i class="lang-icon" aria-hidden="true"></i>
+        <span class="btn-label" data-pl="English" data-en="Polski">English</span>
+      </button>
+    </nav>
+  </header>
+
+  <div class="container" id="main">
+    <!-- Lewa kolumna / sidebar -->
+    <aside class="sidebar" aria-label="Dane kontaktowe i metryczka">
+      <div class="photo">
+        <img src="bartlomiej.jpg" alt="Zdjęcie Bartłomieja Łochowskiego" />
+      </div>
+
+      <section class="contact-block reveal">
+        <h2 data-pl="Kontakt" data-en="Contact">Kontakt</h2>
+        <ul class="contact-list">
+          <li><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:bartek.lochowski@gmail.com">bartek.lochowski@gmail.com</a></li>
+          <li><i class="fas fa-phone" aria-hidden="true"></i> <a href="tel:+48515174182">+48 515 174 182</a></li>
+          <li><i class="fas fa-location-dot" aria-hidden="true"></i> <span>Warszawa</span></li>
+          <li><i class="fab fa-linkedin" aria-hidden="true"></i> <a href="https://www.linkedin.com/in/bart%C5%82omiej-%C5%82ochowski-0118b4243/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><i class="fab fa-github" aria-hidden="true"></i> <a href="https://github.com/barlochowski" target="_blank" rel="noopener">GitHub</a></li>
+          <li><i class="fas fa-file-arrow-down" aria-hidden="true"></i> <a href="CV Bartłomiej Łochowski [PL] 2025_ISTQB.pdf" download data-pl="Pobierz CV (PDF)" data-en="Download CV (PDF)">Pobierz CV (PDF)</a></li>
+        </ul>
+      </section>
+
+      <section class="reveal">
+        <h2 data-pl="Wykształcenie" data-en="Education">Wykształcenie</h2>
+        <p data-pl="SGGW w Warszawie – Logistyka (Licencjat, 2019–2022)"
+           data-en="SGGW Warsaw – Logistics (B.Sc., 2019–2022)">SGGW w Warszawie – Logistyka (Licencjat, 2019–2022)</p>
+      </section>
+
+      <section class="reveal">
+        <h2 data-pl="Certyfikaty" data-en="Certificates">Certyfikaty</h2>
+        <ul>
+          <li>ISTQB Certified Tester Foundation Level v4.0 (2025)</li>
+        </ul>
+      </section>
+
+      <section class="reveal">
+        <h2 data-pl="Języki" data-en="Languages">Języki</h2>
+        <ul>
+          <li data-pl="Polski – ojczysty" data-en="Polish – native">Polski – ojczysty</li>
+          <li data-pl="Angielski – B2" data-en="English – B2">Angielski – B2</li>
+          <li data-pl="Niemiecki – B1" data-en="German – B1">Niemiecki – B1</li>
+        </ul>
+      </section>
+
+      <section class="reveal">
+        <h2 data-pl="Zainteresowania" data-en="Interests">Zainteresowania</h2>
+        <ul>
+          <li data-pl="Nowe technologie" data-en="New technologies">Nowe technologie</li>
+          <li data-pl="Sport i e-sport" data-en="Sport & e-sports">Sport i e-sport</li>
+          <li data-pl="Szachy, gry logiczne" data-en="Chess, logic games">Szachy, gry logiczne</li>
+          <li data-pl="Budowanie komputerów" data-en="PC building">Budowanie komputerów</li>
+        </ul>
+      </section>
+    </aside>
+
+    <!-- Prawa kolumna / treść główna -->
+    <main class="content">
+      <!-- O mnie -->
+      <section id="about" class="reveal">
+        <h2 data-pl="Profil zawodowy" data-en="Professional Profile">Profil zawodowy</h2>
+        <p data-pl="Certyfikowany tester ISTQB z doświadczeniem w testach funkcjonalnych, regresyjnych i eksploracyjnych. Zorientowany na jakość, komunikatywny, chętny do nauki automatyzacji i AI."
+           data-en="ISTQB-certified tester with experience in functional, regression, and exploratory testing. Quality-oriented, communicative, eager to learn automation and AI.">
+          Certyfikowany tester ISTQB z doświadczeniem w testach funkcjonalnych, regresyjnych i eksploracyjnych. Zorientowany na jakość, komunikatywny, chętny do nauki automatyzacji i AI.
+        </p>
+      </section>
+
+      <!-- Doświadczenie -->
+      <section id="experience" class="experience reveal">
+        <h2 data-pl="Doświadczenie zawodowe" data-en="Work Experience">Doświadczenie zawodowe</h2>
+
+        <article class="job-entry">
+          <h3 data-pl="Lionbridge Poland – Software QA Tester" data-en="Lionbridge Poland – Software QA Tester">
+            Lionbridge Poland – Software QA Tester
+          </h3>
+          <p class="job-dates" data-pl="09.2022 – obecnie" data-en="09.2022 – present">09.2022 – obecnie</p>
+
+          <h4 data-pl="Zakres obowiązków" data-en="Responsibilities">Zakres obowiązków</h4>
+          <ul>
+            <li data-pl="Wykonywanie testów funkcjonalnych, regresyjnych i eksploracyjnych na różnych środowiskach"
+                data-en="Performing functional, regression, and exploratory testing across various environments">
+              Wykonywanie testów funkcjonalnych, regresyjnych i eksploracyjnych na różnych środowiskach
+            </li>
+            <li data-pl="Testowanie REST API w Postmanie – analiza odpowiedzi, walidacja danych, tworzenie zapytań"
+                data-en="Testing REST APIs in Postman — response analysis, data validation, request creation">
+              Testowanie REST API w Postmanie – analiza odpowiedzi, walidacja danych, tworzenie zapytań
+            </li>
+            <li data-pl="Tworzenie przypadków testowych, scenariuszy oraz dokumentacji testowej"
+                data-en="Creating test cases, scenarios, and test documentation">
+              Tworzenie przypadków testowych, scenariuszy oraz dokumentacji testowej
+            </li>
+            <li data-pl="Analiza specyfikacji i zgłoszeń błędów, współpraca z zespołem developerskim i produktowym"
+                data-en="Analyzing specifications and bug reports, collaborating with development and product teams">
+              Analiza specyfikacji i zgłoszeń błędów, współpraca z zespołem developerskim i produktowym
+            </li>
+            <li data-pl="Użycie narzędzi: Postman, JIRA, Confluence, DevTools, Android Studio, Xcode"
+                data-en="Using tools: Postman, JIRA, Confluence, DevTools, Android Studio, Xcode">
+              Użycie narzędzi: Postman, JIRA, Confluence, DevTools, Android Studio, Xcode
+            </li>
+            <li data-pl="Praca w metodykach Agile/Scrum – uczestnictwo w daily stand-upach, retrospektywach i planowaniu sprintów"
+                data-en="Working in Agile/Scrum — participating in daily stand-ups, retrospectives, and sprint planning">
+              Praca w metodykach Agile/Scrum – uczestnictwo w daily stand-upach, retrospektywach i planowaniu sprintów
+            </li>
+            <li data-pl="Komunikacja z zespołem międzynarodowym w języku angielskim (B2)"
+                data-en="Communicating with international teams in English (B2)">
+              Komunikacja z zespołem międzynarodowym w języku angielskim (B2)
+            </li>
+          </ul>
+
+          <h4 data-pl="Osiągnięcia" data-en="Achievements">Osiągnięcia</h4>
+          <ul>
+            <li data-pl="Usprawnienie testowania API poprzez wdrożenie własnych szablonów zapytań w Postmanie"
+                data-en="Improved API testing by implementing custom request templates in Postman">
+              Usprawnienie testowania API poprzez wdrożenie własnych szablonów zapytań w Postmanie
+            </li>
+            <li data-pl="Zwiększenie pokrycia testowego dzięki analizie przypadków regresyjnych"
+                data-en="Expanded test coverage through regression case analysis">
+              Zwiększenie pokrycia testowego dzięki analizie przypadków regresyjnych
+            </li>
+            <li data-pl="Wysoka ocena współpracy zespołowej i komunikacji w środowisku międzynarodowym"
+                data-en="Highly rated for teamwork and communication in an international environment">
+              Wysoka ocena współpracy zespołowej i komunikacji w środowisku międzynarodowym
+            </li>
+          </ul>
+        </article>
+      </section>
+
+      <!-- Umiejętności -->
+      <section id="skills" class="skills-panel reveal">
+        <h2 data-pl="Umiejętności" data-en="Skills">Umiejętności</h2>
+        <div class="skills-columns">
+          <div class="skills-category">
+            <h3 data-pl="Twarde" data-en="Hard">Twarde</h3>
+            <ul>
+              <li data-pl="Postman (testy API)" data-en="Postman (API testing)">Postman (testy API)</li>
+              <li data-pl="JIRA, Confluence, XCloud, DevTools" data-en="JIRA, Confluence, XCloud, DevTools">JIRA, Confluence, XCloud, DevTools</li>
+              <li data-pl="HTML/CSS (podstawy)" data-en="HTML/CSS (basics)">HTML/CSS (podstawy)</li>
+              <li data-pl="SQL / PL/SQL (podstawy)" data-en="SQL / PL/SQL (basics)">SQL / PL/SQL (podstawy)</li>
+              <li data-pl="REST API – testowanie i analiza odpowiedzi" data-en="REST API — testing and analysis">REST API – testowanie i analiza odpowiedzi</li>
+              <li>ClickUp, Asana, MS Office</li>
+              <li>Agile / Scrum / Kanban</li>
+              <li data-pl="SDLC – cykl życia oprogramowania" data-en="SDLC — software development life cycle">SDLC – cykl życia oprogramowania</li>
+              <li data-pl="Testy: funkcjonalne, regresyjne, eksploracyjne, wydajnościowe" data-en="Tests: functional, regression, exploratory, performance">Testy: funkcjonalne, regresyjne, eksploracyjne, wydajnościowe</li>
+              <li data-pl="CI/CD – podstawowa znajomość" data-en="CI/CD — basic knowledge">CI/CD – podstawowa znajomość</li>
+              <li data-pl="JavaScript (podstawy, rozwijam umiejętności by pracować w Cypress)" data-en="JavaScript (basics, developing skills to work with Cypress)">JavaScript (podstawy, rozwijam umiejętności by pracować w Cypress)</li>
+            </ul>
+          </div>
+          <div class="skills-category">
+            <h3 data-pl="Miękkie" data-en="Soft">Miękkie</h3>
+            <ul>
+              <li data-pl="Zarządzanie czasem i priorytetami" data-en="Time & priority management">Zarządzanie czasem i priorytetami</li>
+              <li data-pl="Dbałość o szczegóły" data-en="Attention to detail">Dbałość o szczegóły</li>
+              <li data-pl="Myślenie analityczne" data-en="Analytical thinking">Myślenie analityczne</li>
+              <li data-pl="Współpraca zespołowa" data-en="Team collaboration">Współpraca zespołowa</li>
+              <li data-pl="Komunikatywność" data-en="Communication">Komunikatywność</li>
+              <li data-pl="Inteligencja emocjonalna" data-en="Emotional intelligence">Inteligencja emocjonalna</li>
+              <li data-pl="Negocjacje" data-en="Negotiation">Negocjacje</li>
+              <li data-pl="Kreatywność" data-en="Creativity">Kreatywność</li>
+              <li data-pl="Odpowiedzialność" data-en="Responsibility">Odpowiedzialność</li>
+              <li data-pl="Rozwiązywanie problemów" data-en="Problem solving">Rozwiązywanie problemów</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Portfolio / Projekty -->
+      <section id="projects" class="projects reveal">
+        <h2 id="projects-h" data-pl="Portfolio" data-en="Portfolio">Portfolio</h2>
+
+        <div class="project-grid">
+          <!-- Projekt 1 -->
+          <article class="project-card">
+            <h3 data-pl="Postman: kolekcja testów API" data-en="Postman: API test collection">Postman: kolekcja testów API</h3>
+            <p data-pl="Kolekcja testów REST (autoryzacja, walidacja schematu, testy regresyjne)."
+               data-en="REST test collection (auth, schema validation, regression).">
+              Kolekcja testów REST (autoryzacja, walidacja schematu, testy regresyjne).
+            </p>
+            <div class="project-actions">
+              <a class="btn btn-outline" href="projects/postman_collection.json" download data-pl="Pobierz kolekcję" data-en="Download collection">Pobierz kolekcję</a>
+              <a class="btn" href="https://github.com/twoj-github/postman-tests" target="_blank" rel="noopener">GitHub</a>
+            </div>
+            <ul class="project-tags">
+              <li>Postman</li><li>REST</li><li>Tests</li>
+            </ul>
+          </article>
+
+          <!-- Projekt 2 -->
+          <article class="project-card">
+            <h3 data-pl="Case study: testy funkcjonalne" data-en="Case study: Functional testing">Case study: testy funkcjonalne</h3>
+            <p data-pl="Opis podejścia do testów, przykładowe przypadki, raporty błędów i wnioski."
+               data-en="Approach, sample cases, bug reports and lessons learned.">
+              Opis podejścia do testów, przykładowe przypadki, raporty błędów i wnioski.
+            </p>
+            <div class="project-actions">
+              <a class="btn btn-outline" href="Case Study.pdf" target="_blank" rel="noopener">PDF</a>
+              <a class="btn" href="https://github.com/barlochowski/Portfolio/blob/4f9c318d2907e319b294ca5d546ca748d1bad08f/Case%20Study.pdf" target="_blank" rel="noopener">GitHub</a>
+            </div>
+            <ul class="project-tags">
+              <li>Manual</li><li>JIRA</li><li>Docs</li><li>DevTools</li>
+            </ul>
+          </article>
+
+          <!-- Projekt 3 (opcjonalnie) -->
+          <article class="project-card">
+            <h3 data-pl="Cypress: smoke test" data-en="Cypress: smoke test">Cypress: smoke test</h3>
+            <p data-pl="Prosty zestaw testów E2E (logowanie, formularze, nawigacja)."
+               data-en="Simple E2E suite (login, forms, navigation).">
+              Prosty zestaw testów E2E (logowanie, formularze, nawigacja).
+            </p>
+            <div class="project-actions">
+              <a class="btn" href="https://github.com/twoj-github/cypress-smoke" target="_blank" rel="noopener">GitHub</a>
+            </div>
+            <ul class="project-tags">
+              <li>Cypress</li><li>E2E</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- Kontakt -->
+      <section id="contact" class="contact-section reveal">
+        <h2 id="contact-h" data-pl="Kontakt" data-en="Contact">Kontakt</h2>
+        <p data-pl="Napisz do mnie — odpowiem możliwie szybko."
+           data-en="Drop me a line — I’ll get back to you soon.">
+          Napisz do mnie — odpowiem możliwie szybko.
+        </p>
+
+        <form class="contact-form" action="https://formspree.io/f/your-id" method="POST">
+          <label>
+            <span data-pl="Imię" data-en="Name">Imię</span>
+            <input name="name" type="text" required />
+          </label>
+          <label>
+            <span>E-mail</span>
+            <input name="email" type="email" required />
+          </label>
+          <label>
+            <span data-pl="Wiadomość" data-en="Message">Wiadomość</span>
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+          <button class="btn" type="submit" data-pl="Wyślij" data-en="Send">Wyślij</button>
+        </form>
+      </section>
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Bartłomiej Łochowski</p>
+  </footer>
+
+  <!-- Dane strukturalne (opcjonalnie) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Bartłomiej Łochowski",
+    "jobTitle": "QA Tester",
+    "email": "mailto:bartek.lochowski@gmail.com",
+    "address": { "@type": "PostalAddress", "addressLocality": "Warszawa", "addressCountry": "PL" },
+    "url": "https://twojadomena.pl/",
+    "image": "bartlomiej.jpg",
+    "sameAs": [
+      "https://www.linkedin.com/in/tu-twoj-link",
+      "https://github.com/twoj-github"
+    ]
+  }
+  </script>
+
+  <script>
+    // Rok w stopce – drobny UX
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+  <!-- Skrypt z przełącznikami języka/motywu i animacjami -->
+  <script src="script.js"></script>
+</body>
+</html>
