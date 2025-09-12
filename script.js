@@ -123,3 +123,22 @@ document.querySelectorAll('.top-nav a[href^="#"]').forEach(link => {
     window.scrollTo({ top: offset, behavior: 'smooth' });
   });
 });
+<!-- Prosty skrypt potwierdzający wysyłkę -->
+<script>
+  const form = document.getElementById('contact-form');
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const data = new FormData(form);
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    });
+    if (response.ok) {
+      alert("✅ Dziękuję, wiadomość została wysłana!");
+      form.reset();
+    } else {
+      alert("❌ Wystąpił błąd. Spróbuj ponownie.");
+    }
+  });
+</script>
