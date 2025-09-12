@@ -123,4 +123,33 @@ document.querySelectorAll('.top-nav a[href^="#"]').forEach(link => {
     window.scrollTo({ top: offset, behavior: 'smooth' });
   });
 });
+const form = document.querySelector(".contact-form");
+const statusBox = document.getElementById("form-status");
+
+if (form) {
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+    const data = new FormData(form);
+
+    try {
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: data,
+        headers: { "Accept": "application/json" }
+      });
+
+      if (response.ok) {
+        statusBox.textContent = "✅ Dziękuję, wiadomość została wysłana!";
+        statusBox.className = "form-status success";
+        form.reset();
+      } else {
+        statusBox.textContent = "❌ Wystąpił błąd. Spróbuj ponownie.";
+        statusBox.className = "form-status error";
+      }
+    } catch (err) {
+      statusBox.textContent = "❌ Problem z połączeniem. Spróbuj później.";
+      statusBox.className = "form-status error";
+    }
+  });
+}
 
