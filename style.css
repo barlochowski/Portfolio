@@ -138,14 +138,80 @@ body.dark-mode{
 }
 
 /* ===== Contact form ===== */
-.contact-form{ display:grid; gap:10px; max-width:640px; }
-.contact-form label{ display:grid; gap:6px; font-weight: 600; }
-.contact-form input, .contact-form textarea{
-  border:1px solid var(--border); background: var(--bg); color: var(--text);
-  padding: 10px 12px; border-radius: 10px; font: inherit;
+.contact-form {
+  display: grid;
+  gap: 10px;
+  max-width: 640px;
 }
-.contact-form button{ align-self: start; background: var(--brand); color:#fff; border-color: transparent; }
-.contact-form button:hover{ filter: brightness(1.05); }
+
+.contact-form label {
+  display: grid;
+  gap: 6px;
+  font-weight: 600;
+}
+
+.contact-form input,
+.contact-form textarea {
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  padding: 10px 12px;
+  border-radius: 10px;
+  font: inherit;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.contact-form button {
+  align-self: start;
+  background: var(--brand);
+  color: #fff;
+  border-color: transparent;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: filter 0.2s;
+}
+
+.contact-form button:hover {
+  filter: brightness(1.05);
+}
+
+/* ===== Status message ===== */
+.form-status {
+  margin-top: 15px;
+  font-weight: 600;
+  display: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.form-status.success {
+  display: block;
+  background: #d1fae5; /* zielone tło */
+  color: #065f46;      /* ciemna zieleń */
+  border: 1px solid #10b981;
+}
+
+.form-status.error {
+  display: block;
+  background: #fee2e2; /* czerwone tło */
+  color: #991b1b;      /* ciemna czerwień */
+  border: 1px solid #ef4444;
+}
+
+/* Animacja dla komunikatu */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 
 /* ===== Lang icon (Twemoji + fallback) ===== */
 .lang-icon{
