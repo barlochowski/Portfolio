@@ -123,9 +123,11 @@ document.querySelectorAll('.top-nav a[href^="#"]').forEach(link => {
     window.scrollTo({ top: offset, behavior: 'smooth' });
   });
 });
-<!-- Prosty skrypt potwierdzający wysyłkę -->
-<script>
-  const form = document.getElementById('contact-form');
+
+// =====  Prosty skrypt potwierdzający wysyłkę  =====
+const form = document.getElementById('contact-form');
+
+if (form) {
   form.addEventListener('submit', async function(e) {
     e.preventDefault();
     const data = new FormData(form);
@@ -141,4 +143,5 @@ document.querySelectorAll('.top-nav a[href^="#"]').forEach(link => {
       alert("❌ Wystąpił błąd. Spróbuj ponownie.");
     }
   });
-</script>
+}
+
